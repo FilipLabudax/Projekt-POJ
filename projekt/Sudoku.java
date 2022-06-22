@@ -37,8 +37,8 @@ public class Sudoku {
 
 
     public static void ustawienia() {
-        boolean built = true;
-        while (!built)
+        boolean ustawianie = true;
+        while (!ustawianie)
             rozw_sudoku();
 
         //Definiowanie ramki 500x500px
@@ -130,17 +130,17 @@ public class Sudoku {
                     if (!poprawne)
                         JOptionPane.showMessageDialog(new JFrame(), "Podales zla wartosc");
                     else {
-                        boolean correct = false;
+                        boolean odpowiedz = false;
                         for (int i = 0; i < ROZMIAR; i++) {
                             for (int j = 0; j < ROZMIAR; j++) {
-                                correct = dostepna();
-                                if (!correct)
+                                odpowiedz = dostepna();
+                                if (!odpowiedz)
                                     break;
                             }
-                            if (!correct)
+                            if (!odpowiedz)
                                 break;
                         }
-                        if (!correct)
+                        if (!odpowiedz)
                             JOptionPane.showMessageDialog(new JFrame(), "Podales zla odpowiedz, sproboj jeszcze raz");
                         else
                             JOptionPane.showMessageDialog(new JFrame(), "Gratulacje, podales prawidlowa odpowiedz!");
