@@ -214,7 +214,7 @@ public class Sudoku{
                 System.out.println("Content" + buffer.toString()); //Wyswietlanie zawartosci pliku
             }
         });
-
+        //dodawanie fukncji do przycisku ranking
         panel_sterowania.add(ranking);
         ranking.addActionListener(new ActionListener() {
             @Override
